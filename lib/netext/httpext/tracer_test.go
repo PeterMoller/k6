@@ -229,7 +229,7 @@ func TestCancelledRequest(t *testing.T) {
 		resp, err := srv.Client().Transport.RoundTrip(req) //nolint:bodyclose
 		_ = tracer.Done()
 		if resp == nil && err == nil {
-			t.Errorf("Expected either a RoundTrip response or error or trail errors but got %#v and %#v", resp, err)
+			t.Errorf("Expected either a RoundTrip response or error but got %#v and %#v", resp, err)
 		}
 	}
 
